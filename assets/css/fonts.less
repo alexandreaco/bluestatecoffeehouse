@@ -1,0 +1,78 @@
+/* 
+ * Blue State Coffee Fonts 
+ */
+
+
+@import "../fonts/ostrich-sans.css";
+@import "colors.less";
+
+@font-face {
+	font-family: entypo;
+	src: url('../fonts/entypo/entypo.eot'),
+	     url('../fonts/entypo/entypo.svg'),
+	     url('../fonts/entypo/entypo.ttf'),
+	     url('../fonts/entypo/entypo.woff')
+}
+
+.entypo {
+	font-family: 'entypo';
+}
+
+@font-stack-sans-fallback: Verdana, Helvetica, Arial;
+@font-stack-sans: 'Open Sans', @font-stack-sans-fallback;
+@font-stack-sans-black: 'Ostrich Sans Black', @font-stack-sans-fallback;
+@font-stack-sans-bold: 'Ostrich Sans Bold', @font-stack-sans-fallback;
+@font-stack-sans-light: 'Ostrich Sans Light', @font-stack-sans-fallback;
+@font-stack-sans-dashed: 'Ostrich Sans Dashed', @font-stack-sans-fallback;
+@font-stack-sans-rounded: 'Ostrich Sans Rounded', @font-stack-sans-fallback;
+@font-stack-sans-inline: 'Ostrich Sans Inline', @font-stack-sans-fallback;
+@font-stack-sans-inline-italic: 'Ostrich Sans Inline Italic', @font-stack-sans-fallback;
+
+
+h1 {
+	color: @color-red;
+	font-weight: 400;
+	padding-left: 1em;
+	font-variant: small-caps;
+}
+
+h2 {
+	margin: 0px;
+	padding: 0.5em;
+	font-weight: 300;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+	b, strong {
+	
+	}
+	
+	em, i {
+	
+	}
+}
+
+a {
+	color: @color-blue;
+	text-decoration: none;
+	
+	&:hover {
+		color: @color-light-blue;	
+	}
+}

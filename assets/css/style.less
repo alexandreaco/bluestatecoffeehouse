@@ -1,0 +1,322 @@
+/* Blue State Coffee Stylesheet */
+
+@import "fonts.less";
+@import "colors.less";
+
+/* Color Constants */
+
+
+
+body {
+	border: 15px solid #FFFFFF;
+	background: @color-beige;
+	margin:0px;
+	padding:0px;
+	font-family: @font-stack-sans;
+	font-weight:300;
+	
+	#container, #footer-inner, .slider {
+		max-width: 1024px;
+		margin: 0px auto 0px auto;
+	}
+}
+
+/* HEADER STYLES */
+
+#header {
+	.logo {
+		padding: 5em 2em 3em 2em;
+	}
+	#slider {
+		.bjqs-controls {
+			width: 100%;
+			font-family: 'entypo';
+			a {
+				font-size:7em;
+				text-decoration:none;
+				color: @color-light-blue;
+				&:hover {
+					color: @color-beige;
+				}
+			}
+		}
+		ol.bjqs-markers li {
+			a {
+				font-size: 4em;
+				text-decoration: none;
+				line-height:0.5em;
+				color: @color-light-blue;
+				&:hover {
+					color: @color-blue;
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+
+/* MENU STYLES */
+
+.menu  {
+	ul {
+		padding-left:0px;
+		list-style: none;
+		li {
+			//display:inline;
+			padding: 0 1em;
+		}
+		ul {
+			li {
+				padding: 0.4em 0.8em;
+			}
+		}
+	}
+}
+
+.cafes {
+	padding: 2em 0;
+	ul {
+		li {
+			display: block;
+			color: @color-blue;
+			border-bottom: 5px solid #FFFFFF;
+			
+			&:last-of-kind {
+				border-bottom: none;
+			}
+			h2 {
+				font-size:0.84em;
+				cursor:pointer;
+			}
+			
+			.entypo {
+				font-size:3em;
+				margin-top:-1em;
+				text-align:right;
+				a {
+					text-decoration: none;
+					color:@color-light-blue;
+					&:hover {
+						color: @color-blue;
+					}
+				}
+			}
+			.cafe-info {
+				width:100%;
+				float:none;
+				
+				h2 {
+					width: 5em;
+					border-right: 5px solid #FFFFFF;
+					display:inline-block;
+					height:2em;
+					line-height:2em;
+					text-align:center;
+				}
+				
+				p {
+					width: auto;
+					display:inline-block;
+					padding: 1em;
+					line-height: 2em;
+					margin:0;
+				}
+			} 
+		} // end li
+	}
+}
+
+.navigation {
+	color: @color-blue;
+	width: 100%;
+	font-size: 1.5em;
+	a {
+		color: @color-blue;
+		text-decoration: none;
+	}
+}
+
+.ss-icon {
+	float:right;
+	margin-top:-75px;
+	ul li {
+		display:inline;
+		padding:0px;
+	}
+}
+
+
+/* FOOTER STYLES */
+
+#footer {
+	background-color: @color-blue;
+	padding: 1em;
+	color: @color-text;
+	
+	.ss-icon {
+  	font-size: 2em;
+  	
+  	li {  	
+      padding-left: 5px;
+      a {
+  	  text-decoration: none;
+  	  color: #FFFFFF;
+  	  &:hover {
+  		color: @color-red;
+  	  }
+  	  }
+  	}
+  }
+
+}
+
+
+/************* CAFE PAGE STYLES ***************/
+
+.cafe {
+	.cafe-head {
+		.photo {
+			width: 100%;
+			height:250px;
+			overflow:hidden;
+			position:relative;
+
+			h1 {
+				position:absolute;
+				text-align:center;
+				z-index:1;
+				width: 100%;
+				margin:0;
+				padding:0;
+				line-height:250px;
+				text-transform:uppercase;
+				font-size: 7em;
+				color: #FFFFFF;
+				-webkit-font-smoothing: antialiased;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0,0.004);
+			}
+			h1.commonwealth {font-size:4.75em}
+			h1.brown, h1.congress {font-size:6em}
+			img {
+				position:absolute;
+				width: 100%;
+				-webkit-filter:blur(2px);
+				-moz-filter:blur(2px);
+				-o-filter:blur(2px);
+				-ms-filter:blur(2px);
+				filter:blur(2px);
+			}
+		}
+		.cafe-info {
+			padding: 2em;
+			h1 {
+				padding-left: 0px;
+			}				
+		}
+	}
+	.cafe-info-inner, .events-inner {
+			padding: 2em;
+			text-align:center;
+	}
+	#main {
+		clear:both;
+	}
+	.events {
+		clear:both;
+		padding:2em;
+		h1 {
+			padding-left:0px;
+		}
+		ul {
+			list-style:none;
+			padding:0px;
+			li {
+				clear:both;
+				.date {
+					float:left;
+				}
+				.month {
+					width: 5em;
+					background: @color-red;
+					color:#FFFFFF;
+					padding: 0.25em;
+					text-align:center;
+				}
+				.day {
+					width: 5em;
+					background: #FFFFFF;
+					padding: 0.25em;
+					text-align:center;
+					margin-bottom: 2em;
+				}
+				.event-info {
+					float:left;
+					margin-left:2em;
+				}
+			}
+		}
+	}
+}
+
+/************ HOME PAGE STYLES ****************/
+
+
+
+
+
+/************* MEDIA QUERIES ********************/
+
+@media screen and (min-width: 350px) {
+	.cafes ul li h2 {font-size:0.9em}
+}
+
+@media screen and (min-width: 400px) {
+	.cafes ul li h2 {font-size:1.1em}
+}
+
+@media screen and (min-width: 450px) {
+	.cafes ul li h2 {font-size:1.3em}
+}
+
+@media screen and (min-width: 500px) {
+	.cafes ul li h2 {font-size:1.5em}
+}
+
+@media screen and (min-width: 900px) {
+	.navigation {font-size:1em} 
+	
+	/******** CAFE PAGE **********/
+	.cafe {
+		.cafe-head {
+			.photo {
+				width: 100%;
+				height: 250px;
+				float:left;
+				overflow:hidden;
+				img {
+					height:auto;
+					width: 100%;
+				}
+			}
+			.cafe-info {
+				float:left;
+				margin-left:2em;
+			}
+		}
+		.cafe-info-inner, .events-inner {
+			text-align:left;
+			}
+	}
+	
+	
+	.cafe-info, .cafe .events {
+		clear:none;
+		float:left;
+		width:50%;
+		padding:0;
+	}
+
+}
